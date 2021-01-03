@@ -1,6 +1,6 @@
 # leecode
 
-1. 首先上来先就边界条件
+1. 首先上来先看边界条件, None 和 lengh = 0 的情况
 
 
 #### 双指针
@@ -12,11 +12,39 @@
 - 快慢双指针: 慢指针 + 快指针
     - 一般是环形链表找重复
     - 指针一个走一步, 一个走两步
+    - 需要判断 head 和 head.next 存在
+
+# 对撞双指针套路代码
+```py
+left = 0
+right = len(people) - 1
+while (i <= j):
+    if 两边之和 < 要求:
+        i += 1
+    if 两边之和 > 要求:
+        j -= 1
+    if 两边之和 = 要求:
+        处理结果
+```
+
+# 快慢指针套路代码
+```py
+fast = head
+slow = head
+
+# 头结点和 next 不为空
+if fast is not None or fast.next is not None:
+    slow = slow.next
+    fast = fast.next.next
+
+```
+
+
+<!-- GFM-TOC -->
 
 [] 141.环形链表
 [] 881.救生艇
 
-<!-- GFM-TOC -->
 * [Leetcode 题解 - 双指针](#leetcode-题解---双指针)
     * [1. 有序数组的 Two Sum](#1-有序数组的-two-sum)
     * [2. 两数平方和](#2-两数平方和)
