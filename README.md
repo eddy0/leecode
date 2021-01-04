@@ -55,3 +55,10 @@ if fast is not None or fast.next is not None:
     * [7. 最长子序列](#7-最长子序列)
 <!-- GFM-TOC -->
 
+
+
+# 二分查找
+
+重点是要有序
+不外乎是 while 循环然后条件变一下
+注意区间, 一般写法都是左闭右开的区间, [left, right), 左开右闭, 这样在 while 循环的时候是 right = nums.length, left < right
