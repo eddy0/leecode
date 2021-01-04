@@ -61,4 +61,6 @@ if fast is not None or fast.next is not None:
 
 重点是要有序
 不外乎是 while 循环然后条件变一下
-注意区间, 一般写法都是左闭右开的区间, [left, right), 左开右闭, 这样在 while 循环的时候是 right = nums.length, left < right
+- 注意区间, 一般写法都是左闭右开的区间, [left, right), 左开右闭, 这样在 while 循环的时候是 right = nums.length, left < right
+- 找具体的 index 和值 的时候可以用两个闭区间, right = nums.length - 1 , left <= right, right = pivot - 1
+
